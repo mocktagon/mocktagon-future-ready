@@ -54,6 +54,8 @@ const SignUp = () => {
   const { toast } = useToast();
   const navigate = useNavigate();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [googleSheetsUrl, setGoogleSheetsUrl] = useState("");
 
   // Initialize form
   const form = useForm<z.infer<typeof formSchema>>({
@@ -66,17 +68,45 @@ const SignUp = () => {
   });
 
   // Form submission handler
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    if (!googleSheetsUrl) {
+      toast({
+        title: "Configuration Error",
+        description: "Please enter your Google Sheets Web App URL first.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
     console.log("Form submitted:", values);
     
-    // Simulate API call with a small delay
-    setTimeout(() => {
+    try {
+      // Submit to Google Sheets
+      const response = await fetch(googleSheetsUrl, {
+        method: "POST",
+        mode: "no-cors", // Required for Google Apps Script web apps
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+      
       setIsSubmitted(true);
       toast({
         title: "Registration Successful!",
         description: "Please check your email for further instructions.",
       });
-    }, 1000);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Submission Error",
+        description: "There was a problem submitting your information. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -91,6 +121,23 @@ const SignUp = () => {
               <p className="text-muted-foreground mt-2">
                 Fill in your details to begin your interview practice journey.
               </p>
+            </div>
+
+            {/* Google Sheets URL Configuration */}
+            <div className="mb-6 p-4 border rounded-md bg-muted/20">
+              <h3 className="font-medium mb-2">Google Sheets Configuration</h3>
+              <div className="space-y-2">
+                <Input
+                  type="text"
+                  placeholder="Enter your Google Sheets Web App URL"
+                  value={googleSheetsUrl}
+                  onChange={(e) => setGoogleSheetsUrl(e.target.value)}
+                  className="text-sm"
+                />
+                <p className="text-xs text-muted-foreground">
+                  This URL is where your form data will be sent. You need to create a Google Apps Script Web App and paste its URL here.
+                </p>
+              </div>
             </div>
 
             <Form {...form}>
@@ -154,8 +201,12 @@ const SignUp = () => {
                   )}
                 />
 
-                <Button type="submit" className="w-full">
-                  Start Free Trial
+                <Button 
+                  type="submit" 
+                  className="w-full"
+                  disabled={isSubmitting || !googleSheetsUrl}
+                >
+                  {isSubmitting ? "Submitting..." : "Start Free Trial"}
                 </Button>
               </form>
             </Form>
