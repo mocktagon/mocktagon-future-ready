@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import SignUp from "./pages/SignUp";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
 
 // Import category pages
 import CollegeAdmission from "./pages/categories/CollegeAdmission";
@@ -29,6 +31,10 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/signup" element={<SignUp />} />
           
+          {/* Legal pages */}
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          
           {/* Category pages */}
           <Route path="/categories/college-admission" element={<CollegeAdmission />} />
           <Route path="/categories/software-engineering" element={<SoftwareEngineering />} />
@@ -39,8 +45,6 @@ const App = () => (
           <Route path="/categories/law-school" element={<LawSchool />} />
           
           <Route path="/demo" element={<NotFound />} />
-          <Route path="/terms" element={<NotFound />} />
-          <Route path="/privacy" element={<NotFound />} />
           <Route path="/contact-sales" element={<NotFound />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

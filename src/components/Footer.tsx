@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Github, Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
@@ -113,14 +114,14 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-mocktagon-300 hover:text-white transition-colors">
+                <Link to="/privacy" className="text-mocktagon-300 hover:text-white transition-colors">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-mocktagon-300 hover:text-white transition-colors">
+                <Link to="/terms" className="text-mocktagon-300 hover:text-white transition-colors">
                   Terms of Service
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -166,14 +167,14 @@ const Footer = () => {
             <div className="mt-4 md:mt-0">
               <ul className="flex space-x-6">
                 <li>
-                  <a href="#" className="text-sm text-mocktagon-400 hover:text-white transition-colors">
+                  <Link to="/privacy" className="text-sm text-mocktagon-400 hover:text-white transition-colors">
                     Privacy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-sm text-mocktagon-400 hover:text-white transition-colors">
+                  <Link to="/terms" className="text-sm text-mocktagon-400 hover:text-white transition-colors">
                     Terms
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="text-sm text-mocktagon-400 hover:text-white transition-colors">
