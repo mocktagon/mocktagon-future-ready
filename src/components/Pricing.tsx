@@ -177,7 +177,7 @@ const Pricing = () => {
               to="/signup?plan=professional"
               className="w-full py-3 bg-mocktagon-600 text-white rounded-lg font-medium transition-all duration-300 hover:bg-mocktagon-700 shadow-lg block text-center"
             >
-              Start Free Trial
+              Contact Sales
             </Link>
           </div>
 
