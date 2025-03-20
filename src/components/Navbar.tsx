@@ -47,11 +47,13 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <img 
-                src="/lovable-uploads/7bff41a0-1308-42fa-bbd1-bca3cf573134.png" 
-                alt="Mocktagon Logo" 
-                className="h-10"
-              />
+              <div className="h-10 overflow-hidden flex items-center">
+                <img 
+                  src="/lovable-uploads/7bff41a0-1308-42fa-bbd1-bca3cf573134.png" 
+                  alt="Mocktagon Logo" 
+                  className="h-20 object-contain"
+                />
+              </div>
             </Link>
           </div>
 
