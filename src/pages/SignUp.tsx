@@ -7,11 +7,15 @@ import SignUpForm, { SignUpFormData } from "@/components/signup/SignUpForm";
 import GoogleSheetsConfig from "@/components/signup/GoogleSheetsConfig";
 import SuccessMessage from "@/components/signup/SuccessMessage";
 
+// If you want to set a default Google Sheets URL, replace this empty string
+// with your deployed Google Apps Script Web App URL
+const DEFAULT_SHEETS_URL = "";
+
 const SignUp = () => {
   const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [googleSheetsUrl, setGoogleSheetsUrl] = useState("");
+  const [googleSheetsUrl, setGoogleSheetsUrl] = useState(DEFAULT_SHEETS_URL);
 
   // Form submission handler
   const onSubmit = async (values: SignUpFormData) => {
