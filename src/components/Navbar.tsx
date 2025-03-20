@@ -37,7 +37,7 @@ const Navbar = () => {
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/80 backdrop-blur-md shadow-md py-3' 
+          ? 'bg-white/90 backdrop-blur-md shadow-md py-3' 
           : 'bg-transparent py-5'
       }`}
     >
@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <span className="text-2xl font-bold text-mocktagon-800">
+            <span className="text-2xl font-bold">
               <span className="text-gradient">Mocktagon</span>
             </span>
           </div>
@@ -54,25 +54,25 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('features')}
-              className="text-mocktagon-800 hover:text-mocktagon-600 font-medium transition-colors"
+              className="text-gray-800 hover:text-primary font-medium transition-colors"
             >
               Features
             </button>
             <button 
               onClick={() => scrollToSection('how-it-works')}
-              className="text-mocktagon-800 hover:text-mocktagon-600 font-medium transition-colors"
+              className="text-gray-800 hover:text-primary font-medium transition-colors"
             >
               How It Works
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')}
-              className="text-mocktagon-800 hover:text-mocktagon-600 font-medium transition-colors"
+              className="text-gray-800 hover:text-primary font-medium transition-colors"
             >
               Testimonials
             </button>
             <button 
               onClick={() => scrollToSection('pricing')}
-              className="text-mocktagon-800 hover:text-mocktagon-600 font-medium transition-colors"
+              className="text-gray-800 hover:text-primary font-medium transition-colors"
             >
               Pricing
             </button>
@@ -92,7 +92,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md text-mocktagon-800 focus:outline-none"
+              className="p-2 rounded-md text-gray-800 focus:outline-none"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -110,25 +110,25 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <button 
               onClick={() => scrollToSection('features')}
-              className="block px-3 py-3 text-mocktagon-800 font-medium rounded-md w-full text-left"
+              className="block px-3 py-3 text-gray-800 font-medium rounded-md w-full text-left hover:bg-secondary"
             >
               Features
             </button>
             <button 
               onClick={() => scrollToSection('how-it-works')}
-              className="block px-3 py-3 text-mocktagon-800 font-medium rounded-md w-full text-left"
+              className="block px-3 py-3 text-gray-800 font-medium rounded-md w-full text-left hover:bg-secondary"
             >
               How It Works
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')}
-              className="block px-3 py-3 text-mocktagon-800 font-medium rounded-md w-full text-left"
+              className="block px-3 py-3 text-gray-800 font-medium rounded-md w-full text-left hover:bg-secondary"
             >
               Testimonials
             </button>
             <button 
               onClick={() => scrollToSection('pricing')}
-              className="block px-3 py-3 text-mocktagon-800 font-medium rounded-md w-full text-left"
+              className="block px-3 py-3 text-gray-800 font-medium rounded-md w-full text-left hover:bg-secondary"
             >
               Pricing
             </button>

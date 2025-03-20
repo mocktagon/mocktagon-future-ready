@@ -16,16 +16,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 212 79% 45%;
+    --primary: 259 89% 61%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 260 84% 96%;
+    --secondary-foreground: 259 40% 52%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 199 89% 48%;
+    --accent: 262 83% 58%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -33,7 +33,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 259 89% 61%;
 
     --radius: 0.75rem;
   }
@@ -50,7 +50,7 @@
   }
   
   .glass-card-dark {
-    @apply backdrop-blur-md bg-mocktagon-950/30 border border-mocktagon-900/20 shadow-lg;
+    @apply backdrop-blur-md bg-slate-900/70 border border-slate-800/20 shadow-lg;
   }
 
   .section-container {
@@ -74,15 +74,15 @@
   }
 
   .cta-primary {
-    @apply bg-mocktagon-600 hover:bg-mocktagon-700 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform focus:ring-2 focus:ring-mocktagon-500 focus:ring-offset-2;
+    @apply bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform focus:ring-2 focus:ring-primary focus:ring-offset-2;
   }
 
   .cta-secondary {
-    @apply bg-white text-mocktagon-800 px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform focus:ring-2 focus:ring-mocktagon-300 focus:ring-offset-2 border border-mocktagon-200;
+    @apply bg-white text-primary px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform focus:ring-2 focus:ring-accent focus:ring-offset-2 border border-slate-200;
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-mocktagon-600 to-mocktagon-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
 
   .feature-card {
@@ -90,7 +90,7 @@
   }
   
   .pricing-card {
-    @apply p-8 rounded-xl shadow-lg border border-mocktagon-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 transform;
+    @apply p-8 rounded-xl shadow-lg border border-slate-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 transform;
   }
 }
 
@@ -104,12 +104,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(12, 151, 233, 0.3);
+  background-color: rgba(124, 58, 237, 0.3);
   border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(12, 151, 233, 0.5);
+  background-color: rgba(124, 58, 237,.5);
 }
 
 /* Smooth animations for page elements */

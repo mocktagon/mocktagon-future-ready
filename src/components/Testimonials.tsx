@@ -88,48 +88,48 @@ const Testimonials = () => {
   }, [isPaused]);
 
   return (
-    <section id="testimonials" className="relative py-24 bg-mocktagon-950 text-white overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-mocktagon-900 to-mocktagon-950 pointer-events-none"></div>
+    <section id="testimonials" className="relative py-24 bg-primary/5 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-white to-secondary/50 pointer-events-none"></div>
       
       {/* Geometric shapes */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 -left-36 w-96 h-96 rounded-full bg-mocktagon-500/10 blur-3xl"></div>
-        <div className="absolute bottom-1/3 -right-36 w-96 h-96 rounded-full bg-mocktagon-400/10 blur-3xl"></div>
+        <div className="absolute top-1/4 -left-36 w-96 h-96 rounded-full bg-primary/5 blur-3xl"></div>
+        <div className="absolute bottom-1/3 -right-36 w-96 h-96 rounded-full bg-accent/5 blur-3xl"></div>
       </div>
 
       <div className="section-container relative z-10">
         <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto testimonial-animate animate-on-scroll">
-          <span className="inline-block px-3 py-1 text-sm font-medium bg-mocktagon-800/40 text-mocktagon-200 rounded-full">
+          <span className="inline-block px-3 py-1 text-sm font-medium bg-secondary text-primary rounded-full">
             Testimonials
           </span>
-          <h2 className="heading-lg text-white">
+          <h2 className="heading-lg text-gray-900">
             Success Stories from Our Users
           </h2>
-          <p className="text-lg text-mocktagon-200 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Hear from professionals who transformed their interview performance with Mocktagon's AI-powered practice platform.
           </p>
         </div>
 
         <div className="relative max-w-4xl mx-auto testimonial-animate animate-on-scroll">
           <div 
-            className="glass-card-dark rounded-xl p-8 md:p-10"
+            className="glass-card rounded-xl p-8 md:p-10"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
-            <Quote className="h-12 w-12 text-mocktagon-500/60 mb-6" />
+            <Quote className="h-12 w-12 text-primary/40 mb-6" />
             
             <div className="transition-opacity duration-500">
-              <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-800 mb-8 leading-relaxed">
                 "{testimonials[activeIndex].testimonial}"
               </p>
               
               <div className="flex items-center">
-                <div className="flex-shrink-0 h-14 w-14 rounded-full bg-mocktagon-700 flex items-center justify-center text-white font-medium text-lg">
+                <div className="flex-shrink-0 h-14 w-14 rounded-full bg-primary flex items-center justify-center text-white font-medium text-lg">
                   {testimonials[activeIndex].avatar}
                 </div>
                 <div className="ml-4">
-                  <h4 className="text-xl font-semibold text-white">{testimonials[activeIndex].name}</h4>
-                  <p className="text-mocktagon-300">
+                  <h4 className="text-xl font-semibold text-gray-900">{testimonials[activeIndex].name}</h4>
+                  <p className="text-gray-600">
                     {testimonials[activeIndex].role}, {testimonials[activeIndex].company}
                   </p>
                 </div>
@@ -144,7 +144,7 @@ const Testimonials = () => {
                 key={index}
                 onClick={() => setActiveIndex(index)}
                 className={`h-2.5 rounded-full transition-all duration-300 ${
-                  index === activeIndex ? 'w-8 bg-mocktagon-400' : 'w-2.5 bg-mocktagon-700'
+                  index === activeIndex ? 'w-8 bg-primary' : 'w-2.5 bg-gray-300'
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
@@ -155,14 +155,14 @@ const Testimonials = () => {
           <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between pointer-events-none">
             <button
               onClick={prevTestimonial}
-              className="h-12 w-12 rounded-full bg-mocktagon-800/80 flex items-center justify-center text-white transform -translate-x-6 transition-all duration-300 hover:bg-mocktagon-700 pointer-events-auto"
+              className="h-12 w-12 rounded-full bg-white/80 shadow-lg flex items-center justify-center text-primary transform -translate-x-6 transition-all duration-300 hover:bg-white pointer-events-auto"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="h-6 w-6" />
             </button>
             <button
               onClick={nextTestimonial}
-              className="h-12 w-12 rounded-full bg-mocktagon-800/80 flex items-center justify-center text-white transform translate-x-6 transition-all duration-300 hover:bg-mocktagon-700 pointer-events-auto"
+              className="h-12 w-12 rounded-full bg-white/80 shadow-lg flex items-center justify-center text-primary transform translate-x-6 transition-all duration-300 hover:bg-white pointer-events-auto"
               aria-label="Next testimonial"
             >
               <ChevronRight className="h-6 w-6" />
