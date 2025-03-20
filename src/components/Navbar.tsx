@@ -72,6 +72,12 @@ const Navbar = () => {
               How It Works
             </button>
             <button 
+              onClick={() => scrollToSection('categories')}
+              className="text-gray-800 hover:text-primary font-medium transition-colors"
+            >
+              Categories
+            </button>
+            <button 
               onClick={() => scrollToSection('testimonials')}
               className="text-gray-800 hover:text-primary font-medium transition-colors"
             >
@@ -123,6 +129,12 @@ const Navbar = () => {
               className="block px-3 py-3 text-gray-800 font-medium rounded-md w-full text-left hover:bg-secondary"
             >
               How It Works
+            </button>
+            <button 
+              onClick={() => scrollToSection('categories')}
+              className="block px-3 py-3 text-gray-800 font-medium rounded-md w-full text-left hover:bg-secondary"
+            >
+              Categories
             </button>
             <button 
               onClick={() => scrollToSection('testimonials')}
