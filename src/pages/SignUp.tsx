@@ -1,10 +1,8 @@
-
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SignUpForm, { SignUpFormData } from "@/components/signup/SignUpForm";
-import GoogleSheetsConfig from "@/components/signup/GoogleSheetsConfig";
 import SuccessMessage from "@/components/signup/SuccessMessage";
 
 // If you want to set a default Google Sheets URL, replace this empty string
@@ -15,14 +13,15 @@ const SignUp = () => {
   const { toast } = useToast();
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [googleSheetsUrl, setGoogleSheetsUrl] = useState(DEFAULT_SHEETS_URL);
+  // We'll keep the state but remove the UI element for changing it
+  const [googleSheetsUrl] = useState(DEFAULT_SHEETS_URL);
 
   // Form submission handler
   const onSubmit = async (values: SignUpFormData) => {
     if (!googleSheetsUrl) {
       toast({
         title: "Configuration Error",
-        description: "Please enter your Google Sheets Web App URL first.",
+        description: "Google Sheets URL is not configured. Please contact support.",
         variant: "destructive",
       });
       return;
@@ -73,10 +72,7 @@ const SignUp = () => {
               </p>
             </div>
 
-            <GoogleSheetsConfig 
-              googleSheetsUrl={googleSheetsUrl}
-              setGoogleSheetsUrl={setGoogleSheetsUrl}
-            />
+            {/* Removed GoogleSheetsConfig component */}
 
             <SignUpForm 
               onSubmit={onSubmit}

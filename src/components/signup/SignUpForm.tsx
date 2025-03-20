@@ -139,7 +139,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({
         <Button 
           type="submit" 
           className="w-full"
-          disabled={isSubmitting || !googleSheetsUrl}
+          disabled={isSubmitting}
         >
           {isSubmitting ? "Submitting..." : "Start Free Trial"}
         </Button>
