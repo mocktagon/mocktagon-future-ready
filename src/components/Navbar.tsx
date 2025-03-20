@@ -46,8 +46,12 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold">
-              <span className="text-gradient">Mocktagon</span>
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/7bff41a0-1308-42fa-bbd1-bca3cf573134.png" 
+                alt="Mocktagon Logo" 
+                className="h-10"
+              />
             </Link>
           </div>
 
