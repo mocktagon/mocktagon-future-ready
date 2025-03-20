@@ -131,14 +131,14 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Mail className="h-5 w-5 text-mocktagon-400 mr-3 mt-0.5 flex-shrink-0" />
-                <a href="mailto:support@mocktagon.com" className="text-mocktagon-300 hover:text-white transition-colors">
-                  support@mocktagon.com
+                <a href="mailto:mocktagon@funnelhq.co" className="text-mocktagon-300 hover:text-white transition-colors">
+                  mocktagon@funnelhq.co
                 </a>
               </li>
               <li className="flex items-start">
                 <Phone className="h-5 w-5 text-mocktagon-400 mr-3 mt-0.5 flex-shrink-0" />
-                <a href="tel:+1-555-123-4567" className="text-mocktagon-300 hover:text-white transition-colors">
-                  +1-555-123-4567
+                <a href="tel:+1-xxx-xxx-xxxx" className="text-mocktagon-300 hover:text-white transition-colors">
+                  +1-xxx-xxx-xxxx
                 </a>
               </li>
             </ul>
