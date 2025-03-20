@@ -50,7 +50,7 @@ const Navbar = () => {
               <img 
                 src="/lovable-uploads/7bff41a0-1308-42fa-bbd1-bca3cf573134.png" 
                 alt="Mocktagon Logo" 
-                className="h-10"
+                className="h-30"
               />
             </Link>
           </div>
