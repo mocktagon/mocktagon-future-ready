@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -11,7 +10,7 @@ const LawSchool = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       
-      <main className="flex-grow">
+      <main className="flex-grow pt-20">
         <div className="container mx-auto px-4 py-12">
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/2">
