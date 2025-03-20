@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Check, Info } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Pricing = () => {
   const [isAnnual, setIsAnnual] = useState(true);
@@ -122,12 +123,12 @@ const Pricing = () => {
               </ul>
             </div>
             
-            <button 
-              onClick={handleCTAClick}
-              className="w-full py-3 bg-white border border-mocktagon-600 text-mocktagon-800 rounded-lg font-medium transition-all duration-300 hover:bg-mocktagon-50"
+            <Link 
+              to="/signup?plan=basic"
+              className="w-full py-3 bg-white border border-mocktagon-600 text-mocktagon-800 rounded-lg font-medium transition-all duration-300 hover:bg-mocktagon-50 block text-center"
             >
               Start Free Trial
-            </button>
+            </Link>
           </div>
 
           {/* Pro Plan */}
@@ -172,12 +173,12 @@ const Pricing = () => {
               </ul>
             </div>
             
-            <button 
-              onClick={handleCTAClick}
-              className="w-full py-3 bg-mocktagon-600 text-white rounded-lg font-medium transition-all duration-300 hover:bg-mocktagon-700 shadow-lg"
+            <Link 
+              to="/signup?plan=professional"
+              className="w-full py-3 bg-mocktagon-600 text-white rounded-lg font-medium transition-all duration-300 hover:bg-mocktagon-700 shadow-lg block text-center"
             >
               Start Free Trial
-            </button>
+            </Link>
           </div>
 
           {/* Enterprise Plan */}
@@ -217,9 +218,12 @@ const Pricing = () => {
               </ul>
             </div>
             
-            <button className="w-full py-3 bg-white border border-mocktagon-600 text-mocktagon-800 rounded-lg font-medium transition-all duration-300 hover:bg-mocktagon-50">
+            <Link 
+              to="/contact-sales"
+              className="w-full py-3 bg-white border border-mocktagon-600 text-mocktagon-800 rounded-lg font-medium transition-all duration-300 hover:bg-mocktagon-50 block text-center"
+            >
               Contact Sales
-            </button>
+            </Link>
           </div>
         </div>
 

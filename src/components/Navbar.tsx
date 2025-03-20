@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,9 +46,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <span className="text-2xl font-bold">
+            <Link to="/" className="text-2xl font-bold">
               <span className="text-gradient">Mocktagon</span>
-            </span>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -80,12 +81,9 @@ const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button 
-              className="cta-primary"
-              onClick={() => scrollToSection('cta')}
-            >
+            <Link to="/signup" className="cta-primary">
               Start Free Trial
-            </button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -132,12 +130,12 @@ const Navbar = () => {
             >
               Pricing
             </button>
-            <button 
-              onClick={() => scrollToSection('cta')}
+            <Link 
+              to="/signup"
               className="block w-full px-3 py-3 text-center cta-primary mt-3"
             >
               Start Free Trial
-            </button>
+            </Link>
           </div>
         </div>
       )}

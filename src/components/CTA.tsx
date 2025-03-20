@@ -1,6 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { ArrowRight, Check } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CTA = () => {
   useEffect(() => {
@@ -59,12 +60,12 @@ const CTA = () => {
               </ul>
               
               <div className="flex flex-wrap gap-4 pt-2">
-                <button className="cta-primary flex items-center gap-2">
+                <Link to="/signup" className="cta-primary flex items-center gap-2">
                   Start Free Trial <ArrowRight className="h-4 w-4" />
-                </button>
-                <button className="cta-secondary">
+                </Link>
+                <Link to="/demo" className="cta-secondary">
                   See Demo
-                </button>
+                </Link>
               </div>
             </div>
             
@@ -94,12 +95,12 @@ const CTA = () => {
                     </div>
                   </div>
                   
-                  <button className="w-full py-3 cta-primary">
+                  <Link to="/signup" className="w-full py-3 cta-primary block text-center">
                     Create Free Account
-                  </button>
+                  </Link>
                   
                   <p className="text-xs text-center text-gray-500">
-                    By signing up, you agree to our <a href="#" className="text-mocktagon-600 hover:underline">Terms</a> and <a href="#" className="text-mocktagon-600 hover:underline">Privacy Policy</a>
+                    By signing up, you agree to our <Link to="/terms" className="text-mocktagon-600 hover:underline">Terms</Link> and <Link to="/privacy" className="text-mocktagon-600 hover:underline">Privacy Policy</Link>
                   </p>
                 </div>
               </div>

@@ -1,6 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { ArrowRight, Bot, Award, BarChart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const handleCTAClick = () => {
@@ -55,12 +56,12 @@ const Hero = () => {
             </div>
             
             <div className="flex flex-wrap gap-4 hero-animate animate-on-scroll">
-              <button onClick={handleCTAClick} className="cta-primary flex items-center gap-2">
+              <Link to="/signup" className="cta-primary flex items-center gap-2">
                 Start Free Trial <ArrowRight className="h-4 w-4" />
-              </button>
-              <button className="cta-secondary flex items-center gap-2">
+              </Link>
+              <Link to="/demo" className="cta-secondary flex items-center gap-2">
                 Watch Demo
-              </button>
+              </Link>
             </div>
             
             <div className="grid grid-cols-3 gap-4 hero-animate animate-on-scroll">
