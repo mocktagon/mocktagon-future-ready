@@ -9,7 +9,7 @@ import SuccessMessage from "@/components/signup/SuccessMessage";
 
 // If you want to set a default Google Sheets URL, replace this empty string
 // with your deployed Google Apps Script Web App URL
-const DEFAULT_SHEETS_URL = "";
+const DEFAULT_SHEETS_URL = "https://script.google.com/macros/s/AKfycbzSj0H_LJMmlUqdCtpO0EcY_U8K3Z4WJww1dVBpP4JxUBqC06rrfiw8pLbo7Elllp8OGw/exec";
 
 const SignUp = () => {
   const { toast } = useToast();
