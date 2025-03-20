@@ -88,7 +88,7 @@ const Testimonials = () => {
   }, [isPaused]);
 
   return (
-    <section id="testimonials" className="relative py-24 bg-primary/5 overflow-hidden">
+    <section id="testimonials" className="relative py-16 bg-primary/5 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-white to-secondary/50 pointer-events-none"></div>
       
       {/* Geometric shapes */}

@@ -65,7 +65,7 @@ const categoryData = [
 
 const Categories = () => {
   return (
-    <section id="categories" className="relative py-24 bg-white">
+    <section id="categories" className="relative py-16 bg-white">
       <div className="section-container">
         <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto process-animate animate-on-scroll">
           <span className="inline-block px-3 py-1 text-sm font-medium bg-secondary text-primary rounded-full">

@@ -32,7 +32,7 @@ const Features = () => {
   }, []);
 
   return (
-    <section id="features" className="relative py-24 bg-gradient-to-b from-white to-mocktagon-50/50">
+    <section id="features" className="relative py-16 bg-gradient-to-b from-white to-mocktagon-50/50">
       <div className="section-container">
         <div className="text-center space-y-4 mb-16 max-w-3xl mx-auto feature-animate animate-on-scroll">
           <span className="inline-block px-3 py-1 text-sm font-medium bg-mocktagon-100 text-mocktagon-800 rounded-full">
