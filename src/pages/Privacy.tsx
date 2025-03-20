@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Shield, Lock, ArrowLeft } from 'lucide-react';
+import { Shield, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Privacy = () => {
@@ -11,7 +11,7 @@ const Privacy = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       
-      <main className="flex-grow py-16 bg-gray-50">
+      <main className="flex-grow pt-28 pb-16 bg-gray-50">
         <div className="section-container">
           <div className="mb-10 flex items-center space-x-2">
             <Link to="/">
@@ -152,3 +152,4 @@ const Privacy = () => {
 };
 
 export default Privacy;
+

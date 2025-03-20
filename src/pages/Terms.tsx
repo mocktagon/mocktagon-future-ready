@@ -11,7 +11,7 @@ const Terms = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       
-      <main className="flex-grow py-16 bg-gray-50">
+      <main className="flex-grow pt-28 pb-16 bg-gray-50">
         <div className="section-container">
           <div className="mb-10 flex items-center space-x-2">
             <Link to="/">
@@ -183,3 +183,4 @@ const Terms = () => {
 };
 
 export default Terms;
+
