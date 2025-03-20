@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import Navbar from "@/components/Navbar";
@@ -62,7 +63,7 @@ const SignUp = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       
-      <div className="flex-grow container max-w-md mx-auto px-4 py-16">
+      <div className="flex-grow container max-w-md mx-auto px-4 py-16 pt-28">
         {!isSubmitted ? (
           <>
             <div className="text-center mb-8">
