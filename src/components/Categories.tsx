@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Link } from 'react-router-dom';
 
 const categoryData = [
   {
@@ -17,49 +18,56 @@ const categoryData = [
     title: "College Admission Interviews",
     description: "Practice with realistic college admission interview questions for Ivy League and top universities.",
     pattern: "bg-gradient-to-br from-purple-500/20 to-blue-500/20 via-pink-500/10",
-    icon: "🎓"
+    icon: "🎓",
+    path: "/categories/college-admission"
   },
   {
     id: 2,
     title: "Software Engineering",
     description: "Technical interviews covering algorithms, system design, and coding challenges.",
     pattern: "bg-gradient-to-br from-blue-500/20 to-cyan-500/20 via-indigo-500/10",
-    icon: "💻"
+    icon: "💻",
+    path: "/categories/software-engineering"
   },
   {
     id: 3,
     title: "Product Management",
     description: "Product sense, analytical, and strategy questions for PM roles.",
     pattern: "bg-gradient-to-br from-green-500/20 to-emerald-500/20 via-teal-500/10",
-    icon: "📊"
+    icon: "📊",
+    path: "/categories/product-management"
   },
   {
     id: 4,
     title: "Data Science",
     description: "Statistical analysis, machine learning, and data modeling interview preparation.",
     pattern: "bg-gradient-to-br from-orange-500/20 to-amber-500/20 via-yellow-500/10",
-    icon: "📈"
+    icon: "📈",
+    path: "/categories/data-science"
   },
   {
     id: 5,
     title: "MBA Interviews",
     description: "Case studies and behavioral questions for business school admissions.",
     pattern: "bg-gradient-to-br from-red-500/20 to-rose-500/20 via-pink-500/10",
-    icon: "📝"
+    icon: "📝",
+    path: "/categories/mba-interviews"
   },
   {
     id: 6,
     title: "Medical School Admissions",
     description: "MMI scenarios and traditional medical school interview practice.",
     pattern: "bg-gradient-to-br from-cyan-500/20 to-blue-500/20 via-indigo-500/10",
-    icon: "⚕️"
+    icon: "⚕️",
+    path: "/categories/medical-school"
   },
   {
     id: 7,
     title: "Law School Interviews",
     description: "Legal reasoning and admissions interviews for JD programs.",
     pattern: "bg-gradient-to-br from-indigo-500/20 to-violet-500/20 via-purple-500/10",
-    icon: "⚖️"
+    icon: "⚖️",
+    path: "/categories/law-school"
   }
 ];
 
@@ -113,9 +121,12 @@ const Categories = () => {
                           <ScrollArea className="flex-1">
                             <p className="text-gray-600 text-sm">{category.description}</p>
                           </ScrollArea>
-                          <button className="mt-4 bg-secondary hover:bg-secondary/80 text-primary font-medium py-2 px-4 rounded-md transition-colors">
+                          <Link 
+                            to={category.path} 
+                            className="mt-4 inline-block bg-secondary hover:bg-secondary/80 text-primary font-medium py-2 px-4 rounded-md transition-colors text-center"
+                          >
                             Learn More
-                          </button>
+                          </Link>
                         </div>
                       </CardContent>
                     </Card>
