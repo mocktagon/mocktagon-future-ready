@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Octagon } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,13 +43,9 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center">
-          {/* Logo with concentric octagons */}
+          {/* Logo */}
           <div className="flex items-center">
-            <div className="relative mr-2">
-              <Octagon className="h-8 w-8 text-primary absolute" strokeWidth={1.5} />
-              <Octagon className="h-6 w-6 text-accent absolute top-1 left-1" strokeWidth={1.5} />
-            </div>
-            <span className="text-2xl font-bold pl-8">
+            <span className="text-2xl font-bold">
               <span className="text-gradient">Mocktagon</span>
             </span>
           </div>

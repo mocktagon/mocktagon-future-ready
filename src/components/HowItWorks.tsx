@@ -54,7 +54,7 @@ const HowItWorks = () => {
             <div className="flex flex-col md:items-end text-right process-animate animate-on-scroll">
               <div className="md:order-1 mb-4 md:mb-0">
                 <div className="relative flex items-center justify-center">
-                  <div className="md:absolute md:right-[-40px] h-16 w-16 rounded-full bg-secondary flex items-center justify-center z-10">
+                  <div className="md:absolute md:right-[-50px] h-16 w-16 rounded-full bg-secondary flex items-center justify-center z-10">
                     <UserPlus className="h-8 w-8 text-primary" />
                   </div>
                   <div className="hidden md:block md:ml-8 w-8 h-0.5 bg-secondary" />
@@ -72,7 +72,7 @@ const HowItWorks = () => {
             <div className="flex flex-col md:items-start text-left md:mt-32 process-animate animate-on-scroll" style={{ transitionDelay: '0.1s' }}>
               <div className="mb-4 md:mb-0">
                 <div className="relative flex items-center justify-center">
-                  <div className="md:absolute md:left-[-40px] h-16 w-16 rounded-full bg-secondary flex items-center justify-center z-10">
+                  <div className="md:absolute md:left-[-50px] h-16 w-16 rounded-full bg-secondary flex items-center justify-center z-10">
                     <BrainCircuit className="h-8 w-8 text-primary" />
                   </div>
                   <div className="hidden md:block md:mr-8 w-8 h-0.5 bg-secondary" />
@@ -90,7 +90,7 @@ const HowItWorks = () => {
             <div className="flex flex-col md:items-end text-right process-animate animate-on-scroll" style={{ transitionDelay: '0.2s' }}>
               <div className="md:order-1 mb-4 md:mb-0">
                 <div className="relative flex items-center justify-center">
-                  <div className="md:absolute md:right-[-40px] h-16 w-16 rounded-full bg-secondary flex items-center justify-center z-10">
+                  <div className="md:absolute md:right-[-50px] h-16 w-16 rounded-full bg-secondary flex items-center justify-center z-10">
                     <MessageSquare className="h-8 w-8 text-primary" />
                   </div>
                   <div className="hidden md:block md:ml-8 w-8 h-0.5 bg-secondary" />
@@ -108,7 +108,7 @@ const HowItWorks = () => {
             <div className="flex flex-col md:items-start text-left md:mt-32 process-animate animate-on-scroll" style={{ transitionDelay: '0.3s' }}>
               <div className="mb-4 md:mb-0">
                 <div className="relative flex items-center justify-center">
-                  <div className="md:absolute md:left-[-40px] h-16 w-16 rounded-full bg-secondary flex items-center justify-center z-10">
+                  <div className="md:absolute md:left-[-50px] h-16 w-16 rounded-full bg-secondary flex items-center justify-center z-10">
                     <BarChart className="h-8 w-8 text-primary" />
                   </div>
                   <div className="hidden md:block md:mr-8 w-8 h-0.5 bg-secondary" />

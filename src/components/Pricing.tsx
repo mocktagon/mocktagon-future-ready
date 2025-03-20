@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { Check, Info, Mail } from 'lucide-react';
+import { Check, Info } from 'lucide-react';
 
 const Pricing = () => {
   const [isAnnual, setIsAnnual] = useState(true);
@@ -217,8 +217,8 @@ const Pricing = () => {
               </ul>
             </div>
             
-            <button className="w-full py-3 flex items-center justify-center bg-white border border-mocktagon-600 text-mocktagon-800 rounded-lg font-medium transition-all duration-300 hover:bg-mocktagon-50">
-              <Mail className="w-4 h-4 mr-2" /> Contact Sales
+            <button className="w-full py-3 bg-white border border-mocktagon-600 text-mocktagon-800 rounded-lg font-medium transition-all duration-300 hover:bg-mocktagon-50">
+              Contact Sales
             </button>
           </div>
         </div>
