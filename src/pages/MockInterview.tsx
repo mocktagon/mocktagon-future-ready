@@ -1,83 +1,18 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Layout } from '@/components/Layout';
 import { 
-  Eye, Search, MessageSquare, Clock, Users, 
-  FileText, BookText 
+  FileText, MessageSquare, ChevronRight, BookText,
+  Users, Play
 } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { Label } from '@/components/ui/label';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { 
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 
 const MockInterview = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>("");
-  const [selectedCompany, setSelectedCompany] = useState<string>("");
-  const [selectedDifficulty, setSelectedDifficulty] = useState<string>("");
-  
-  const interviewQuestions = [
-    {
-      id: 1,
-      views: "170.7K",
-      timeAgo: "an hour ago",
-      question: "Talk about a time when you worked on a team and demonstrated leadership.",
-      category: "Behavioral",
-      company: "Accenture",
-      difficulty: "Medium",
-      practiced: "1.1K"
-    },
-    {
-      id: 2,
-      views: "33.3K",
-      timeAgo: "2 hours ago",
-      question: "Can you describe a challenging problem you solved in a previous project and the steps you took to resolve it?",
-      category: "Machine Learning",
-      company: "Oracle",
-      difficulty: "Hard",
-      practiced: "222"
-    },
-    {
-      id: 3,
-      views: "284.7K",
-      timeAgo: "3 hours ago",
-      question: "Tell me about yourself.",
-      category: "Behavioral",
-      company: "Apple",
-      difficulty: "Easy",
-      practiced: "5.8K"
-    },
-  ];
-
   return (
     <Layout>
       <div className="pt-24 pb-16 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
-        {/* Top Banner */}
-        <div className="bg-gradient-to-r from-pink-500 via-orange-400 to-yellow-400 rounded-lg p-4 mb-8 flex justify-between items-center">
-          <p className="text-white font-medium">
-            Connect your Interview Copilot™ with your Interview rooms.
-          </p>
-          <Button variant="default" className="bg-white text-black hover:bg-white/90 gap-1">
-            Get Started <FileText className="h-4 w-4" />
-          </Button>
-        </div>
-        
         {/* Main Content */}
         <div className="flex flex-col md:flex-row gap-8">
           {/* Sidebar */}
@@ -89,21 +24,21 @@ const MockInterview = () => {
                   Final Round
                 </div>
                 
-                <div className="space-y-3">
-                  <h3 className="font-medium text-slate-500 mb-1">Interview</h3>
-                  <Button variant="ghost" className="w-full justify-start gap-2">
+                <div className="space-y-1">
+                  <h3 className="font-medium text-gray-500 mb-1 text-sm">Interview</h3>
+                  <Button variant="ghost" className="w-full justify-start gap-2 text-sm py-2 h-auto">
                     <MessageSquare className="h-4 w-4" />
                     Live Interview
                   </Button>
-                  <Button variant="secondary" className="w-full justify-start gap-2 bg-slate-100">
+                  <Button variant="ghost" className="w-full justify-start gap-2 text-sm bg-orange-50 text-orange-600 py-2 h-auto">
                     <MessageSquare className="h-4 w-4" />
                     Mock Interview
                   </Button>
-                  <Button variant="ghost" className="w-full justify-start gap-2">
+                  <Button variant="ghost" className="w-full justify-start gap-2 text-sm py-2 h-auto">
                     <BookText className="h-4 w-4" />
                     Preparation Hub
                   </Button>
-                  <Button variant="ghost" className="w-full justify-start gap-2">
+                  <Button variant="ghost" className="w-full justify-start gap-2 text-sm py-2 h-auto">
                     <FileText className="h-4 w-4" />
                     Document Center
                   </Button>
@@ -111,113 +46,204 @@ const MockInterview = () => {
                 
                 <Separator className="my-4" />
                 
-                <div className="space-y-3">
-                  <h3 className="font-medium text-slate-500 mb-1">Tools</h3>
-                  <Button variant="ghost" className="w-full justify-start gap-2">
+                <div className="space-y-1">
+                  <h3 className="font-medium text-gray-500 mb-1 text-sm">Tools</h3>
+                  <Button variant="ghost" className="w-full justify-start gap-2 text-sm py-2 h-auto">
                     <BookText className="h-4 w-4" />
                     AI Material Generator
                   </Button>
-                  <Button variant="ghost" className="w-full justify-start gap-2">
+                  <Button variant="ghost" className="w-full justify-start gap-2 text-sm py-2 h-auto">
                     <Users className="h-4 w-4" />
-                    Auto Apply <span className="ml-1 bg-slate-200 text-slate-800 rounded text-xs px-1">Beta</span>
+                    Auto Apply <span className="ml-1 bg-slate-100 text-slate-800 rounded text-xs px-1">Beta</span>
+                  </Button>
+                  <Button variant="ghost" className="w-full justify-start gap-2 text-sm py-2 h-auto">
+                    <MessageSquare className="h-4 w-4" />
+                    Interview Question Bank
+                  </Button>
+                  <Button variant="ghost" className="w-full justify-start gap-2 text-sm py-2 h-auto">
+                    <FileText className="h-4 w-4" />
+                    Get Started
                   </Button>
                 </div>
               </CardContent>
             </Card>
           </div>
           
-          {/* Main Question Bank */}
+          {/* Main Content Area */}
           <div className="flex-1">
-            <h1 className="text-2xl font-bold mb-6">Question Bank</h1>
+            <h1 className="text-2xl font-bold mb-4">Get the most out of Final Round AI</h1>
             
-            {/* Filters */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-              <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Category" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="behavioral">Behavioral</SelectItem>
-                  <SelectItem value="technical">Technical</SelectItem>
-                  <SelectItem value="machine-learning">Machine Learning</SelectItem>
-                </SelectContent>
-              </Select>
+            <h2 className="text-xl font-semibold mb-6">Start with the basics</h2>
+            
+            {/* Steps Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+              {/* Step 1 */}
+              <Card className="rounded-lg">
+                <CardContent className="p-4 flex flex-col h-full">
+                  <div className="flex items-start gap-3 mb-2">
+                    <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">1</span>
+                    <h3 className="font-semibold">Add your resume</h3>
+                  </div>
+                  <p className="text-sm text-gray-600 mb-4">Upload your resume and cover letter to customize your AI</p>
+                  <div className="mt-auto flex justify-end">
+                    <ChevronRight className="h-5 w-5 text-gray-400" />
+                  </div>
+                </CardContent>
+              </Card>
               
-              <Select value={selectedCompany} onValueChange={setSelectedCompany}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Company" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="apple">Apple</SelectItem>
-                  <SelectItem value="google">Google</SelectItem>
-                  <SelectItem value="microsoft">Microsoft</SelectItem>
-                  <SelectItem value="accenture">Accenture</SelectItem>
-                  <SelectItem value="oracle">Oracle</SelectItem>
-                </SelectContent>
-              </Select>
+              {/* Step 2 */}
+              <Card className="rounded-lg">
+                <CardContent className="p-4 flex flex-col h-full">
+                  <div className="flex items-start gap-3 mb-2">
+                    <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">2</span>
+                    <h3 className="font-semibold">Add your position</h3>
+                  </div>
+                  <p className="text-sm text-gray-600 mb-4">Upload job description so that AI can provide customized answer</p>
+                  <div className="mt-auto flex justify-end">
+                    <ChevronRight className="h-5 w-5 text-gray-400" />
+                  </div>
+                </CardContent>
+              </Card>
               
-              <Select value={selectedDifficulty} onValueChange={setSelectedDifficulty}>
-                <SelectTrigger>
-                  <SelectValue placeholder="Difficulty Level" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="easy">Easy</SelectItem>
-                  <SelectItem value="medium">Medium</SelectItem>
-                  <SelectItem value="hard">Hard</SelectItem>
-                </SelectContent>
-              </Select>
+              {/* Step 3 */}
+              <Card className="rounded-lg">
+                <CardContent className="p-4 flex flex-col h-full">
+                  <div className="flex items-start gap-3 mb-2">
+                    <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">3</span>
+                    <h3 className="font-semibold">Launch an interview</h3>
+                  </div>
+                  <p className="text-sm text-gray-600 mb-4">Launch your interview Copilot™ for real-time interview support</p>
+                  <div className="mt-auto flex justify-end">
+                    <ChevronRight className="h-5 w-5 text-gray-400" />
+                  </div>
+                </CardContent>
+              </Card>
+              
+              {/* Step 4 */}
+              <Card className="rounded-lg">
+                <CardContent className="p-4 flex flex-col h-full">
+                  <div className="flex items-start gap-3 mb-2">
+                    <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">4</span>
+                    <h3 className="font-semibold">View interview report</h3>
+                  </div>
+                  <p className="text-sm text-gray-600 mb-4">Review your interview notes and past interview performance</p>
+                  <div className="mt-auto flex justify-end">
+                    <ChevronRight className="h-5 w-5 text-gray-400" />
+                  </div>
+                </CardContent>
+              </Card>
             </div>
             
-            <div className="flex justify-end mb-8">
-              <div className="relative w-full sm:w-72">
-                <Input 
-                  type="search" 
-                  placeholder="Search" 
-                  className="pl-3 pr-10"
-                />
-                <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-              </div>
-            </div>
-            
-            {/* Questions List */}
-            <div className="space-y-6">
-              {interviewQuestions.map((q) => (
-                <Card key={q.id} className="overflow-hidden">
+            {/* Copilot Demo Section */}
+            <div className="mb-12">
+              <h2 className="text-xl font-semibold mb-6">Watch the Interview Copilot™ demo</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Demo 1 */}
+                <Card className="rounded-lg overflow-hidden">
                   <CardContent className="p-6">
-                    <div className="flex items-center text-sm text-gray-500 mb-3">
-                      <Eye className="h-4 w-4 mr-1" />
-                      <span>{q.views} views</span>
-                      <span className="ml-auto">{q.timeAgo}</span>
-                    </div>
-                    
-                    <h3 className="text-lg font-bold mb-3">{q.question}</h3>
-                    
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      <span className="bg-slate-100 px-3 py-1 rounded-full text-sm">
-                        {q.category}
-                      </span>
-                      <span className="bg-slate-100 px-3 py-1 rounded-full text-sm">
-                        Asked at {q.company}
-                      </span>
-                      <span className="bg-slate-100 px-3 py-1 rounded-full text-sm">
-                        Difficulty: {q.difficulty}
-                      </span>
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <div className="text-sm">
-                        {q.practiced} Users Practiced
-                      </div>
-                      <Button 
-                        variant="default" 
-                        className="bg-orange-500 hover:bg-orange-600"
-                      >
-                        Practice with This Question
-                      </Button>
+                    <h3 className="font-medium mb-4">How to set up Interview Copilot™ for Live Interview?</h3>
+                    <Button 
+                      variant="outline" 
+                      className="flex items-center gap-2 text-sm"
+                    >
+                      <Play className="h-4 w-4" />
+                      Watch the tutorial on YouTube
+                    </Button>
+                    <div className="mt-4 bg-gradient-to-r from-pink-100 to-purple-100 rounded-lg h-24 flex items-center justify-center">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-pink-400 to-purple-400"></div>
                     </div>
                   </CardContent>
                 </Card>
-              ))}
+                
+                {/* Demo 2 */}
+                <Card className="rounded-lg overflow-hidden">
+                  <CardContent className="p-6">
+                    <h3 className="font-medium mb-4">How to set up Interview Copilot™ for Coding Interviews?</h3>
+                    <Button 
+                      variant="outline" 
+                      className="flex items-center gap-2 text-sm"
+                    >
+                      <Play className="h-4 w-4" />
+                      Watch the tutorial
+                    </Button>
+                    <div className="mt-4 bg-gradient-to-r from-orange-100 to-red-100 rounded-lg h-24 flex items-center justify-center">
+                      <div className="p-2 text-center text-white bg-gradient-to-r from-orange-500 to-red-500 rounded w-32">
+                        <span className="text-xs">Interview Copilot for Coding</span>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                {/* Demo 3 */}
+                <Card className="rounded-lg overflow-hidden">
+                  <CardContent className="p-6">
+                    <h3 className="font-medium mb-4">How to use AI Mock Interview?</h3>
+                    <Button 
+                      variant="outline" 
+                      className="flex items-center gap-2 text-sm"
+                    >
+                      <Play className="h-4 w-4" />
+                      Watch the tutorial
+                    </Button>
+                    <div className="mt-4 bg-gray-100 rounded-lg h-24 flex items-center justify-center">
+                      <div className="bg-white border border-gray-200 rounded w-16 h-20"></div>
+                    </div>
+                  </CardContent>
+                </Card>
+                
+                {/* Demo 4 */}
+                <Card className="rounded-lg overflow-hidden">
+                  <CardContent className="p-6">
+                    <h3 className="font-medium mb-4">How to change Interview Copilot™ settings?</h3>
+                    <Button 
+                      variant="outline" 
+                      className="flex items-center gap-2 text-sm"
+                    >
+                      <Play className="h-4 w-4" />
+                      Watch the tutorial
+                    </Button>
+                    <div className="mt-4 bg-gray-100 rounded-lg h-24 flex items-center justify-center">
+                      <div className="bg-white border border-gray-200 rounded w-16 h-20 relative">
+                        <div className="absolute bottom-0 right-0 w-8 h-6 bg-orange-500 rounded-tl"></div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+            
+            {/* Auto Apply Demo Section */}
+            <div>
+              <h2 className="text-xl font-semibold mb-6">Watch the Auto Apply demo</h2>
+              
+              <Card className="rounded-lg overflow-hidden">
+                <CardContent className="p-6">
+                  <div className="md:flex md:gap-6 items-start">
+                    <div className="mb-4 md:mb-0 md:flex-1">
+                      <h3 className="font-medium mb-4">Why we need Auto Apply</h3>
+                      <Button 
+                        variant="outline" 
+                        className="flex items-center gap-2 text-sm"
+                      >
+                        <Play className="h-4 w-4" />
+                        Watch the tutorial on YouTube
+                      </Button>
+                    </div>
+                    <div className="md:flex-1">
+                      <div className="bg-gray-100 rounded-lg h-24 flex items-center justify-center">
+                        <div className="bg-white border border-gray-200 rounded w-16 h-20"></div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            
+            {/* Onboarding banner at the bottom */}
+            <div className="fixed bottom-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 max-w-md flex items-center justify-between">
+              <p className="text-sm font-medium">Complete onboarding tutorial and receive a reward</p>
+              <Button size="sm" className="bg-orange-500 hover:bg-orange-600 ml-4">5</Button>
             </div>
           </div>
         </div>
