@@ -46,7 +46,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
               <div className="h-10 overflow-hidden flex items-center">
                 <img 
@@ -59,7 +59,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             <button 
               onClick={() => scrollToSection('features')}
               className="text-gray-800 hover:text-primary font-medium transition-colors"
@@ -95,18 +95,24 @@ const Navbar = () => {
           {/* Login and CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/login">
-              <Button variant="outline" className="gap-2">
+              <Button variant="outline" size="sm" className="gap-1.5">
                 <LogIn className="h-4 w-4" />
                 Login
               </Button>
             </Link>
-            <Link to="/signup" className="cta-primary">
+            <Link to="/signup" className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-md font-medium transition-colors">
               Start Free Trial
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center">
+            <Link to="/login" className="mr-4">
+              <Button variant="outline" size="sm" className="gap-1.5">
+                <LogIn className="h-4 w-4" />
+                Login
+              </Button>
+            </Link>
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2 rounded-md text-gray-800 focus:outline-none"
@@ -156,14 +162,8 @@ const Navbar = () => {
               Pricing
             </button>
             <Link 
-              to="/login"
-              className="block px-3 py-3 text-gray-800 font-medium rounded-md w-full text-left hover:bg-secondary"
-            >
-              Login
-            </Link>
-            <Link 
               to="/signup"
-              className="block w-full px-3 py-3 text-center cta-primary mt-3"
+              className="block w-full px-3 py-3 text-center bg-primary hover:bg-primary/90 text-white rounded-md mt-3 font-medium transition-colors"
             >
               Start Free Trial
             </Link>
