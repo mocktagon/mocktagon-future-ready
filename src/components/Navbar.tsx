@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, LogIn } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -91,8 +92,14 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          {/* Login and CTA Buttons */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Link to="/login">
+              <Button variant="outline" className="gap-2">
+                <LogIn className="h-4 w-4" />
+                Login
+              </Button>
+            </Link>
             <Link to="/signup" className="cta-primary">
               Start Free Trial
             </Link>
@@ -148,6 +155,12 @@ const Navbar = () => {
             >
               Pricing
             </button>
+            <Link 
+              to="/login"
+              className="block px-3 py-3 text-gray-800 font-medium rounded-md w-full text-left hover:bg-secondary"
+            >
+              Login
+            </Link>
             <Link 
               to="/signup"
               className="block w-full px-3 py-3 text-center cta-primary mt-3"
