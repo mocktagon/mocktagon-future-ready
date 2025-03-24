@@ -24,7 +24,7 @@ const Sidebar = () => {
           >
             <Link to="/mock-interview">
               <Mic className="h-4 w-4" />
-              Mock Interview
+              Mock Job Interview
             </Link>
           </Button>
           <Button 
