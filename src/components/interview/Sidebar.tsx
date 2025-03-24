@@ -17,7 +17,7 @@ const Sidebar = () => {
           <Button 
             variant="ghost" 
             className={`w-full justify-start gap-2 text-sm py-2 h-auto ${
-              currentPath === '/mock-interview' ? 'bg-orange-50 text-orange-600' : ''
+              currentPath === '/mock-interview' ? 'bg-secondary text-primary' : ''
             }`} 
             asChild
           >
@@ -29,7 +29,7 @@ const Sidebar = () => {
           <Button 
             variant="ghost" 
             className={`w-full justify-start gap-2 text-sm py-2 h-auto ${
-              currentPath === '/college-admission' ? 'bg-orange-50 text-orange-600' : ''
+              currentPath === '/college-admission' ? 'bg-secondary text-primary' : ''
             }`} 
             asChild
           >
@@ -41,7 +41,7 @@ const Sidebar = () => {
           <Button 
             variant="ghost" 
             className={`w-full justify-start gap-2 text-sm py-2 h-auto ${
-              currentPath === '/guided-sessions' ? 'bg-orange-50 text-orange-600' : ''
+              currentPath === '/guided-sessions' ? 'bg-secondary text-primary' : ''
             }`} 
             asChild
           >
@@ -53,7 +53,7 @@ const Sidebar = () => {
           <Button 
             variant="ghost" 
             className={`w-full justify-start gap-2 text-sm py-2 h-auto ${
-              currentPath === '/learning-resources' ? 'bg-orange-50 text-orange-600' : ''
+              currentPath === '/learning-resources' ? 'bg-secondary text-primary' : ''
             }`} 
             asChild
           >
