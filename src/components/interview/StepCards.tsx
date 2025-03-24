@@ -42,23 +42,23 @@ const StepCards = () => {
   const steps = [
     {
       number: 1,
-      title: "Add your resume",
-      description: "Upload your resume and cover letter to customize your AI"
+      title: "Upload your academic profile",
+      description: "Add your GPA, test scores, and extracurricular activities to personalize your practice"
     },
     {
       number: 2,
-      title: "Add your position",
-      description: "Upload job description so that AI can provide customized answer"
+      title: "Select target schools",
+      description: "Choose specific colleges you're applying to for tailored interview questions"
     },
     {
       number: 3,
-      title: "Launch an interview",
-      description: "Launch your interview Copilot™ for real-time interview support"
+      title: "Practice with AI interviewer",
+      description: "Engage in realistic college admission interviews with our AI interviewer"
     },
     {
       number: 4,
-      title: "View interview report",
-      description: "Review your interview notes and past interview performance",
+      title: "Review feedback & improve",
+      description: "Get detailed feedback on your responses and areas for improvement",
       link: "/interview-report"
     }
   ];
