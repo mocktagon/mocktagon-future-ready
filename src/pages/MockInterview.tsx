@@ -26,7 +26,7 @@ const MockInterview = () => {
             {/* Steps Cards */}
             <StepCards />
             
-            {/* Demo Sections */}
+            {/* Demo Sections replaced with Mocktagon guide */}
             <DemoSections />
             
             {/* Onboarding banner */}
