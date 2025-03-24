@@ -12,23 +12,23 @@ const PerformanceSummary = () => {
         <div className="space-y-4">
           <div>
             <h3 className="text-sm font-medium text-muted-foreground">Overall Score</h3>
-            <p className="text-3xl font-bold mt-1">79%</p>
+            <p className="text-3xl font-bold mt-1">86%</p>
           </div>
           
           <div>
             <h3 className="text-sm font-medium text-muted-foreground">Strengths</h3>
             <ul className="mt-1 list-disc list-inside">
-              <li>Teamwork & Collaboration</li>
-              <li>Adaptability</li>
-              <li>Work Ethic</li>
+              <li>Safety Awareness</li>
+              <li>Problem Solving</li>
+              <li>Regulatory Compliance</li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-sm font-medium text-muted-foreground">Areas for Improvement</h3>
             <ul className="mt-1 list-disc list-inside">
-              <li>Technical Knowledge</li>
-              <li>Leadership Skills</li>
+              <li>Communication Skills</li>
+              <li>Cross-functional Collaboration</li>
             </ul>
           </div>
           

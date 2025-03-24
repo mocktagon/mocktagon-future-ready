@@ -14,16 +14,16 @@ import {
   PolarRadiusAxis
 } from 'recharts';
 
-// Mock data for the radar chart
+// Updated data for aircraft engineer team lead role
 const skillsData = [
-  { subject: 'Communication', score: 75, fullMark: 100 },
-  { subject: 'Problem Solving', score: 82, fullMark: 100 },
-  { subject: 'Technical Knowledge', score: 65, fullMark: 100 },
-  { subject: 'Critical Thinking', score: 79, fullMark: 100 },
-  { subject: 'Adaptability', score: 88, fullMark: 100 },
-  { subject: 'Teamwork', score: 90, fullMark: 100 },
-  { subject: 'Leadership', score: 70, fullMark: 100 },
-  { subject: 'Work Ethic', score: 85, fullMark: 100 },
+  { subject: 'Technical Knowledge', score: 87, fullMark: 100 },
+  { subject: 'Leadership', score: 82, fullMark: 100 },
+  { subject: 'Problem Solving', score: 90, fullMark: 100 },
+  { subject: 'Safety Awareness', score: 95, fullMark: 100 },
+  { subject: 'Communication', score: 78, fullMark: 100 },
+  { subject: 'Project Management', score: 85, fullMark: 100 },
+  { subject: 'Regulatory Compliance', score: 92, fullMark: 100 },
+  { subject: 'Team Collaboration', score: 88, fullMark: 100 },
 ];
 
 const SkillsRadarChart = () => {
