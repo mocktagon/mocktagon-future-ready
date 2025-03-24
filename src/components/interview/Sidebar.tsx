@@ -1,9 +1,8 @@
 
 import React from 'react';
-import { Mic, BookText, FileText, Play, GraduationCap } from 'lucide-react';
+import { Mic, BookText, Play, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
 import { Link, useLocation } from 'react-router-dom';
 
 const Sidebar = () => {
@@ -39,17 +38,29 @@ const Sidebar = () => {
               College Admission
             </Link>
           </Button>
-          <Button variant="ghost" className="w-full justify-start gap-2 text-sm py-2 h-auto">
-            <Play className="h-4 w-4" />
-            Guided Sessions
+          <Button 
+            variant="ghost" 
+            className={`w-full justify-start gap-2 text-sm py-2 h-auto ${
+              currentPath === '/guided-sessions' ? 'bg-orange-50 text-orange-600' : ''
+            }`} 
+            asChild
+          >
+            <Link to="/guided-sessions">
+              <Play className="h-4 w-4" />
+              Guided Sessions
+            </Link>
           </Button>
-          <Button variant="ghost" className="w-full justify-start gap-2 text-sm py-2 h-auto">
-            <BookText className="h-4 w-4" />
-            Learning Resources
-          </Button>
-          <Button variant="ghost" className="w-full justify-start gap-2 text-sm py-2 h-auto">
-            <FileText className="h-4 w-4" />
-            Study Materials
+          <Button 
+            variant="ghost" 
+            className={`w-full justify-start gap-2 text-sm py-2 h-auto ${
+              currentPath === '/learning-resources' ? 'bg-orange-50 text-orange-600' : ''
+            }`} 
+            asChild
+          >
+            <Link to="/learning-resources">
+              <BookText className="h-4 w-4" />
+              Learning Resources
+            </Link>
           </Button>
         </div>
       </CardContent>

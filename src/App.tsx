@@ -13,6 +13,8 @@ import Terms from "./pages/Terms";
 import MockInterview from "./pages/MockInterview";
 import InterviewReport from "./pages/InterviewReport";
 import CollegeAdmissionMock from "./pages/CollegeAdmissionMock";
+import GuidedSessions from "./pages/GuidedSessions";
+import LearningResources from "./pages/LearningResources";
 
 // Import category pages
 import CollegeAdmission from "./pages/categories/CollegeAdmission";
@@ -40,6 +42,8 @@ const App = () => (
           <Route path="/mock-interview" element={<MockInterview />} />
           <Route path="/interview-report" element={<InterviewReport />} />
           <Route path="/college-admission" element={<CollegeAdmissionMock />} />
+          <Route path="/guided-sessions" element={<GuidedSessions />} />
+          <Route path="/learning-resources" element={<LearningResources />} />
           
           {/* Legal pages */}
           <Route path="/privacy" element={<Privacy />} />
