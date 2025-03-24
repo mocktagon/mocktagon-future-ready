@@ -12,8 +12,8 @@ const MocktagonGuide = () => {
       <Card className="rounded-lg overflow-hidden mb-6">
         <CardContent className="p-6">
           <div className="flex items-start gap-4">
-            <div className="bg-orange-100 p-3 rounded-full">
-              <Mic className="h-5 w-5 text-orange-600" />
+            <div className="bg-purple-100 p-3 rounded-full">
+              <Mic className="h-5 w-5 text-purple-600" />
             </div>
             <div>
               <h3 className="font-medium mb-2">Practice with Mock Interviews</h3>
@@ -61,27 +61,27 @@ const MocktagonTips = () => {
           <div className="md:flex md:gap-6 items-start">
             <div className="mb-4 md:mb-0 md:flex-1">
               <div className="flex items-center gap-2 mb-3">
-                <Info className="h-5 w-5 text-orange-600" />
+                <Info className="h-5 w-5 text-purple-600" />
                 <h3 className="font-medium">Get the most from Mocktagon</h3>
               </div>
               <ul className="space-y-2 text-sm text-gray-600 mb-4">
                 <li className="flex items-start gap-2">
-                  <span className="bg-orange-100 text-orange-600 rounded-full h-5 w-5 flex items-center justify-center shrink-0 mt-0.5">1</span>
+                  <span className="bg-purple-100 text-purple-600 rounded-full h-5 w-5 flex items-center justify-center shrink-0 mt-0.5">1</span>
                   <span>Complete at least 5 mock interviews before your actual interview</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="bg-orange-100 text-orange-600 rounded-full h-5 w-5 flex items-center justify-center shrink-0 mt-0.5">2</span>
+                  <span className="bg-purple-100 text-purple-600 rounded-full h-5 w-5 flex items-center justify-center shrink-0 mt-0.5">2</span>
                   <span>Review your feedback carefully after each session</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="bg-orange-100 text-orange-600 rounded-full h-5 w-5 flex items-center justify-center shrink-0 mt-0.5">3</span>
+                  <span className="bg-purple-100 text-purple-600 rounded-full h-5 w-5 flex items-center justify-center shrink-0 mt-0.5">3</span>
                   <span>Practice with different interview types to build versatility</span>
                 </li>
               </ul>
             </div>
             <div className="md:flex-1">
-              <div className="bg-gradient-to-r from-orange-100 to-red-100 rounded-lg h-24 flex items-center justify-center">
-                <div className="p-2 text-center text-white bg-gradient-to-r from-orange-500 to-red-500 rounded w-32">
+              <div className="bg-gradient-to-r from-purple-100 to-violet-100 rounded-lg h-24 flex items-center justify-center">
+                <div className="p-2 text-center text-white bg-gradient-to-r from-purple-500 to-violet-500 rounded w-32">
                   <span className="text-xs">Mocktagon Guide</span>
                 </div>
               </div>
