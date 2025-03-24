@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mic, BookText, Play, GraduationCap } from 'lucide-react';
+import { UserRound, BookText, Play, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Link, useLocation } from 'react-router-dom';
@@ -22,7 +22,7 @@ const Sidebar = () => {
             asChild
           >
             <Link to="/mock-interview">
-              <Mic className="h-4 w-4" />
+              <UserRound className="h-4 w-4 text-purple-600" />
               Mock Job Interview
             </Link>
           </Button>
