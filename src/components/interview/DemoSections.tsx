@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -32,8 +31,8 @@ const MocktagonGuide = () => {
       <Card className="rounded-lg overflow-hidden">
         <CardContent className="p-6">
           <div className="flex items-start gap-4">
-            <div className="bg-blue-100 p-3 rounded-full">
-              <BookText className="h-5 w-5 text-blue-600" />
+            <div className="bg-purple-100 p-3 rounded-full">
+              <BookText className="h-5 w-5 text-purple-600" />
             </div>
             <div>
               <h3 className="font-medium mb-2">Learn Interview Best Practices</h3>
