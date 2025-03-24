@@ -36,7 +36,7 @@ const SkillsRadarChart = () => {
         <div className="h-[400px]">
           <ChartContainer 
             config={{
-              skills: { color: '#ff6700' }
+              skills: { color: '#7c3aed' }
             }}
           >
             <RadarChart cx="50%" cy="50%" outerRadius="80%" data={skillsData}>
@@ -46,8 +46,8 @@ const SkillsRadarChart = () => {
               <Radar
                 name="Skills"
                 dataKey="score"
-                stroke="#ff6700"
-                fill="#ff6700"
+                stroke="#7c3aed"
+                fill="#7c3aed"
                 fillOpacity={0.6}
               />
               <ChartLegend
@@ -56,7 +56,7 @@ const SkillsRadarChart = () => {
                     payload={[
                       {
                         value: 'Skills Score',
-                        color: '#ff6700',
+                        color: '#7c3aed',
                         dataKey: 'skills',
                       },
                     ]}
