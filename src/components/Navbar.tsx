@@ -95,7 +95,7 @@ const Navbar = () => {
           {/* Login and CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Link to="/login">
-              <Button className="bg-mocktagon-100 hover:bg-mocktagon-200 text-mocktagon-800 gap-1.5 border-none">
+              <Button className="bg-mocktagon-100 hover:bg-mocktagon-200 text-mocktagon-800 gap-1.5 border-none h-[42px] px-4 py-2">
                 <LogIn className="h-4 w-4" />
                 Login
               </Button>
@@ -108,7 +108,7 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <Link to="/login" className="mr-4">
-              <Button className="bg-mocktagon-100 hover:bg-mocktagon-200 text-mocktagon-800 gap-1.5 border-none">
+              <Button className="bg-mocktagon-100 hover:bg-mocktagon-200 text-mocktagon-800 gap-1.5 border-none h-[42px] px-4 py-2">
                 <LogIn className="h-4 w-4" />
                 Login
               </Button>
