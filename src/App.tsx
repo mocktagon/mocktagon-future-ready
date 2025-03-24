@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import MockInterview from "./pages/MockInterview";
+import InterviewReport from "./pages/InterviewReport";
 
 // Import category pages
 import CollegeAdmission from "./pages/categories/CollegeAdmission";
@@ -36,6 +37,7 @@ const App = () => (
           
           {/* Mock Interview page */}
           <Route path="/mock-interview" element={<MockInterview />} />
+          <Route path="/interview-report" element={<InterviewReport />} />
           
           {/* Legal pages */}
           <Route path="/privacy" element={<Privacy />} />

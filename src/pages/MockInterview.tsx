@@ -5,6 +5,9 @@ import Sidebar from '@/components/interview/Sidebar';
 import StepCards from '@/components/interview/StepCards';
 import DemoSections from '@/components/interview/DemoSections';
 import OnboardingBanner from '@/components/interview/OnboardingBanner';
+import { Button } from '@/components/ui/button';
+import { FileText } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const MockInterview = () => {
   return (
@@ -19,7 +22,16 @@ const MockInterview = () => {
           
           {/* Main Content Area */}
           <div className="flex-1">
-            <h1 className="text-2xl font-bold mb-4">Get started with your interview practice</h1>
+            <div className="flex items-center justify-between mb-4">
+              <h1 className="text-2xl font-bold">Get started with your interview practice</h1>
+              
+              <Link to="/interview-report">
+                <Button variant="outline" className="gap-1.5">
+                  <FileText className="h-4 w-4" />
+                  View Report
+                </Button>
+              </Link>
+            </div>
             
             <h2 className="text-xl font-semibold mb-6">Start with the fundamentals</h2>
             
