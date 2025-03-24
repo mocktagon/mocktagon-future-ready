@@ -2,7 +2,7 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 interface StepProps {
   number: number;
@@ -12,6 +12,10 @@ interface StepProps {
 }
 
 const Step = ({ number, title, description, link }: StepProps) => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+  
+  // Determine which steps to show based on current path
   const StepContent = () => (
     <CardContent className="p-4 flex flex-col h-full">
       <div className="flex items-start gap-3 mb-2">
@@ -39,7 +43,34 @@ const Step = ({ number, title, description, link }: StepProps) => {
 };
 
 const StepCards = () => {
-  const steps = [
+  const location = useLocation();
+  const isJobInterview = location.pathname === "/mock-interview";
+  
+  const jobInterviewSteps = [
+    {
+      number: 1,
+      title: "Upload your resume",
+      description: "Add your work experience, skills, and job targets to personalize your practice interviews"
+    },
+    {
+      number: 2,
+      title: "Select target position",
+      description: "Choose specific roles you're applying for to get tailored interview questions"
+    },
+    {
+      number: 3,
+      title: "Practice with AI interviewer",
+      description: "Engage in realistic job interviews with our AI interviewer and get real-time feedback"
+    },
+    {
+      number: 4,
+      title: "Review performance analysis",
+      description: "Get detailed feedback on your responses and key areas for improvement",
+      link: "/interview-report"
+    }
+  ];
+  
+  const collegeAdmissionSteps = [
     {
       number: 1,
       title: "Upload your academic profile",
@@ -62,6 +93,8 @@ const StepCards = () => {
       link: "/interview-report"
     }
   ];
+
+  const steps = isJobInterview ? jobInterviewSteps : collegeAdmissionSteps;
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
