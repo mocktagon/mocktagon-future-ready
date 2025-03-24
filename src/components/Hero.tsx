@@ -33,15 +33,6 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-mocktagon-500/5 rounded-full filter blur-3xl animate-pulse-slow"></div>
         <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-mocktagon-400/5 rounded-full filter blur-3xl animate-pulse-slow" style={{animationDelay: '1s'}}></div>
-        
-        {/* Brand logo watermark - increased size by 27x and repositioned */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-5">
-          <img 
-            src="/lovable-uploads/d4ea7aaf-9774-40a6-b082-340276f83fbd.png" 
-            alt="" 
-            className="w-[1728px] h-auto filter brightness-150 z-0"
-          />
-        </div>
       </div>
       
       <div className="section-container relative z-10">
