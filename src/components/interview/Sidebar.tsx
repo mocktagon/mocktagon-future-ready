@@ -1,9 +1,10 @@
 
 import React from 'react';
-import { Mic, BookText, FileText, Play } from 'lucide-react';
+import { Mic, BookText, FileText, Play, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
@@ -14,6 +15,12 @@ const Sidebar = () => {
           <Button variant="ghost" className="w-full justify-start gap-2 text-sm bg-orange-50 text-orange-600 py-2 h-auto">
             <Mic className="h-4 w-4" />
             Mock Interview
+          </Button>
+          <Button variant="ghost" className="w-full justify-start gap-2 text-sm py-2 h-auto" asChild>
+            <Link to="/college-admission">
+              <GraduationCap className="h-4 w-4" />
+              College Admission
+            </Link>
           </Button>
           <Button variant="ghost" className="w-full justify-start gap-2 text-sm py-2 h-auto">
             <Play className="h-4 w-4" />
