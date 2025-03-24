@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Linkedin, Instagram, Github, Mail, Phone, MessageSquare } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram, Github, Mail, Phone, Mic } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -88,7 +88,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/mock-interview" className="text-mocktagon-300 hover:text-white transition-colors flex items-center gap-1.5">
-                  <MessageSquare className="h-4 w-4" />
+                  <Mic className="h-4 w-4" />
                   Mock Interview
                 </Link>
               </li>
