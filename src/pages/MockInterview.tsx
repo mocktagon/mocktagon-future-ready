@@ -19,9 +19,9 @@ const MockInterview = () => {
           
           {/* Main Content Area */}
           <div className="flex-1">
-            <h1 className="text-2xl font-bold mb-4">Get the most out of Final Round AI</h1>
+            <h1 className="text-2xl font-bold mb-4">Get started with your interview practice</h1>
             
-            <h2 className="text-xl font-semibold mb-6">Start with the basics</h2>
+            <h2 className="text-xl font-semibold mb-6">Start with the fundamentals</h2>
             
             {/* Steps Cards */}
             <StepCards />
