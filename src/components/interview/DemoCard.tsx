@@ -6,15 +6,23 @@ import { Button } from '@/components/ui/button';
 
 interface DemoCardProps {
   title: string;
-  buttonText: string;
-  children: React.ReactNode;
+  buttonText?: string;
+  description?: string;
+  icon?: React.ReactNode;
+  children?: React.ReactNode;
 }
 
-const DemoCard = ({ title, buttonText, children }: DemoCardProps) => {
+const DemoCard = ({ title, buttonText = "Watch Demo", description, icon, children }: DemoCardProps) => {
   return (
     <Card className="rounded-lg overflow-hidden">
       <CardContent className="p-6">
-        <h3 className="font-medium mb-4">{title}</h3>
+        <div className="flex items-center gap-3 mb-3">
+          {icon && <div className="shrink-0">{icon}</div>}
+          <h3 className="font-medium">{title}</h3>
+        </div>
+        
+        {description && <p className="text-sm text-gray-600 mb-4">{description}</p>}
+        
         <Button 
           variant="outline" 
           className="flex items-center gap-2 text-sm"
@@ -22,9 +30,12 @@ const DemoCard = ({ title, buttonText, children }: DemoCardProps) => {
           <Play className="h-4 w-4" />
           {buttonText}
         </Button>
-        <div className="mt-4">
-          {children}
-        </div>
+        
+        {children && (
+          <div className="mt-4">
+            {children}
+          </div>
+        )}
       </CardContent>
     </Card>
   );
