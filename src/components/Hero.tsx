@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { ArrowRight, Bot, Award, BarChart } from 'lucide-react';
+import { ArrowRight, Bot } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
@@ -26,107 +26,84 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center bg-hero-pattern pt-20 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-mocktagon-50/5 to-white pointer-events-none"></div>
+    <section id="home" className="relative min-h-screen flex items-center bg-gray-50 pt-24 pb-16 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-gray-50/90 pointer-events-none"></div>
       
       {/* Geometric shapes in background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-mocktagon-500/5 rounded-full filter blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-mocktagon-400/5 rounded-full filter blur-3xl animate-pulse-slow" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full filter blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-primary/5 rounded-full filter blur-3xl animate-pulse-slow" style={{animationDelay: '1s'}}></div>
       </div>
       
       <div className="section-container relative z-10">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-8">
+            {/* AI-Powered Label */}
+            <div className="inline-block hero-animate animate-on-scroll">
+              <span className="inline-flex items-center px-4 py-1.5 text-sm font-medium bg-white text-gray-800 rounded-full border border-gray-200 shadow-sm">
+                <span className="flex h-2 w-2 rounded-full bg-green-500 mr-2"></span>
+                AI-Powered Interview Preparation
+              </span>
+            </div>
+            
             <div className="space-y-5">
-              <div className="inline-block hero-animate animate-on-scroll">
-                <span className="inline-flex items-center px-3 py-1 text-xs font-medium bg-mocktagon-100 text-mocktagon-800 rounded-full">
-                  <span className="flex h-2 w-2 rounded-full bg-mocktagon-500 mr-2"></span>
-                  AI-Powered Interview Preparation
-                </span>
-              </div>
-              
-              <h1 className="heading-xl hero-animate animate-on-scroll">
-                Master Your Interviews with <span className="text-gradient">AI Precision</span>
+              <h1 className="text-5xl md:text-6xl font-bold text-black hero-animate animate-on-scroll">
+                Master Your Interviews
               </h1>
+              <h2 className="text-4xl md:text-5xl font-bold hero-animate animate-on-scroll">
+                <span className="text-primary">With AI Precision</span>
+              </h2>
               
-              <p className="subheading hero-animate animate-on-scroll">
-                Practice with our AI that simulates real interviewers, provides personalized feedback, and helps you land your dream job.
+              <p className="text-xl text-gray-700 mt-6 hero-animate animate-on-scroll max-w-lg">
+                Practice with our AI that simulates real interviewers, provides personalized feedback, and helps you land your dream job. With AI Precision
               </p>
             </div>
             
-            <div className="flex flex-wrap gap-4 hero-animate animate-on-scroll">
-              <Link to="/signup" className="cta-primary flex items-center gap-2">
-                Start Free Trial <ArrowRight className="h-4 w-4" />
+            <div className="flex flex-wrap gap-4 hero-animate animate-on-scroll pt-4">
+              <Link to="/signup" className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 shadow-md flex items-center gap-2">
+                Start Free Trial <ArrowRight className="h-5 w-5" />
               </Link>
-              <Link to="/demo" className="cta-secondary flex items-center gap-2">
-                Watch Demo
+              <Link to="/demo" className="bg-white hover:bg-gray-50 text-gray-800 px-8 py-3 rounded-full font-medium border border-gray-200 transition-all duration-300 shadow-md flex items-center gap-2">
+                Watch Demo <span className="inline-block h-5 w-5 bg-gray-200 rounded-sm"></span>
               </Link>
-            </div>
-            
-            <div className="grid grid-cols-3 gap-4 hero-animate animate-on-scroll">
-              <div className="flex flex-col items-center text-center">
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-mocktagon-100 mb-2">
-                  <Bot className="h-6 w-6 text-mocktagon-700" />
-                </div>
-                <span className="text-sm font-medium text-mocktagon-900">AI-Driven</span>
-              </div>
-              
-              <div className="flex flex-col items-center text-center">
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-mocktagon-100 mb-2">
-                  <Award className="h-6 w-6 text-mocktagon-700" />
-                </div>
-                <span className="text-sm font-medium text-mocktagon-900">Industry Leading</span>
-              </div>
-              
-              <div className="flex flex-col items-center text-center">
-                <div className="flex items-center justify-center h-12 w-12 rounded-full bg-mocktagon-100 mb-2">
-                  <BarChart className="h-6 w-6 text-mocktagon-700" />
-                </div>
-                <span className="text-sm font-medium text-mocktagon-900">Data Insights</span>
-              </div>
             </div>
           </div>
           
           <div className="relative hero-animate animate-on-scroll">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-radial from-mocktagon-200/40 to-transparent rounded-full filter blur-2xl"></div>
-              <div className="relative bg-white/80 backdrop-blur-sm p-6 rounded-xl border border-mocktagon-100/60 shadow-xl animate-float">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="h-12 w-12 rounded-full bg-mocktagon-100 flex items-center justify-center">
-                      <Bot className="h-6 w-6 text-mocktagon-700" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-mocktagon-900">AI Interviewer</h3>
-                      <p className="text-sm text-mocktagon-700">Technical Interview</p>
-                    </div>
-                  </div>
-                  
-                  <div className="p-4 bg-mocktagon-50 rounded-lg">
-                    <p className="text-sm text-mocktagon-800">"Tell me about a challenging project you worked on and how you overcame obstacles."</p>
-                  </div>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-mocktagon-500">Analyzing response...</span>
-                    <span className="inline-flex items-center px-2 py-1 text-xs font-medium bg-mocktagon-100 text-mocktagon-700 rounded-full">
-                      Difficulty: Medium
-                    </span>
-                  </div>
+            {/* Main AI Interviewer Card */}
+            <div className="bg-white rounded-3xl shadow-xl p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="bg-primary/10 p-3 rounded-xl">
+                  <Bot className="h-8 w-8 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-xl text-gray-900">AI Interviewer</h3>
+                  <p className="text-gray-600">Technical Interview</p>
                 </div>
               </div>
-            </div>
-            
-            <div className="absolute -bottom-8 -right-4 bg-white/80 backdrop-blur-sm p-4 rounded-lg border border-mocktagon-100/60 shadow-lg w-48 animate-float" style={{animationDelay: '1s'}}>
-              <div className="space-y-2">
-                <h4 className="font-medium text-sm text-mocktagon-900">Real-time Feedback</h4>
-                <div className="flex space-x-1">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className="h-2 flex-1 rounded-full bg-mocktagon-500"></div>
-                  ))}
-                  <div className="h-2 flex-1 rounded-full bg-mocktagon-200"></div>
+              
+              <div className="bg-gray-50 p-5 rounded-2xl mb-6">
+                <p className="text-gray-800">"Tell me about a challenging project you worked on and how you overcame obstacles."</p>
+              </div>
+              
+              {/* Feedback Card */}
+              <div className="relative">
+                <div className="bg-white border border-gray-100 rounded-2xl p-5 shadow-lg mb-6">
+                  <h4 className="font-medium mb-3 text-gray-800">Real-time Feedback</h4>
+                  <div className="flex gap-1 mb-3">
+                    <div className="h-2 w-20 rounded-full bg-primary"></div>
+                    <div className="h-2 w-20 rounded-full bg-primary"></div>
+                    <div className="h-2 w-20 rounded-full bg-primary"></div>
+                    <div className="h-2 w-20 rounded-full bg-gray-200"></div>
+                  </div>
+                  <p className="text-sm text-gray-600">Great details in your examples</p>
                 </div>
-                <p className="text-xs text-mocktagon-700">Great detail in your examples</p>
+                
+                <div className="absolute -bottom-4 -right-2 bg-primary text-white px-4 py-2 rounded-full text-sm">
+                  <div className="flex items-center gap-2">
+                    Analyzing Response... <span className="font-bold">78%</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

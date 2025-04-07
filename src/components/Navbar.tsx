@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, LogIn } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 
@@ -40,7 +40,7 @@ const Navbar = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-white/90 backdrop-blur-md shadow-md py-3' 
-          : 'bg-transparent py-5'
+          : 'bg-gray-50 py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -52,14 +52,21 @@ const Navbar = () => {
                 <img 
                   src="/lovable-uploads/7bff41a0-1308-42fa-bbd1-bca3cf573134.png" 
                   alt="Mocktagon Logo" 
-                  className="h-40 object-contain"
+                  className="h-10 object-contain"
                 />
+                <span className="text-xl font-bold text-gray-900 ml-2">mocktagon</span>
               </div>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-10">
+            <button 
+              onClick={() => scrollToSection('home')}
+              className="text-primary font-medium transition-colors"
+            >
+              Home
+            </button>
             <button 
               onClick={() => scrollToSection('features')}
               className="text-gray-800 hover:text-primary font-medium transition-colors"
@@ -70,7 +77,7 @@ const Navbar = () => {
               onClick={() => scrollToSection('how-it-works')}
               className="text-gray-800 hover:text-primary font-medium transition-colors"
             >
-              How It Works
+              How it works
             </button>
             <button 
               onClick={() => scrollToSection('categories')}
@@ -92,26 +99,17 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Login and CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Link to="/login">
-              <Button variant="outline" size="sm" className="bg-mocktagon-100 hover:bg-mocktagon-200 text-mocktagon-800 gap-1.5 border-none">
-                <LogIn className="h-3.5 w-3.5" />
-                Login
-              </Button>
-            </Link>
-            <Link to="/signup" className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-md font-medium transition-colors">
-              Start Free Trial
+          {/* Login Button */}
+          <div className="hidden md:flex items-center">
+            <Link to="/login" className="text-primary font-medium hover:text-primary/80 flex items-center">
+              Login <ArrowRight className="h-4 w-4 ml-1" />
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
-            <Link to="/login" className="mr-4">
-              <Button variant="outline" size="sm" className="bg-mocktagon-100 hover:bg-mocktagon-200 text-mocktagon-800 gap-1.5 border-none">
-                <LogIn className="h-3.5 w-3.5" />
-                Login
-              </Button>
+            <Link to="/login" className="mr-4 text-primary font-medium">
+              Login <ArrowRight className="h-4 w-4 ml-1 inline" />
             </Link>
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -132,6 +130,12 @@ const Navbar = () => {
         <div className="md:hidden bg-white shadow-lg rounded-b-lg mt-2 animate-slide-down">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <button 
+              onClick={() => scrollToSection('home')}
+              className="block px-3 py-3 text-primary font-medium rounded-md w-full text-left hover:bg-secondary"
+            >
+              Home
+            </button>
+            <button 
               onClick={() => scrollToSection('features')}
               className="block px-3 py-3 text-gray-800 font-medium rounded-md w-full text-left hover:bg-secondary"
             >
@@ -141,7 +145,7 @@ const Navbar = () => {
               onClick={() => scrollToSection('how-it-works')}
               className="block px-3 py-3 text-gray-800 font-medium rounded-md w-full text-left hover:bg-secondary"
             >
-              How It Works
+              How it works
             </button>
             <button 
               onClick={() => scrollToSection('categories')}
