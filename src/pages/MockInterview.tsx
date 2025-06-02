@@ -2,7 +2,7 @@
 import React from 'react';
 import { Layout } from '@/components/Layout';
 import Sidebar from '@/components/interview/Sidebar';
-import StepCards from '@/components/interview/StepCards';
+import TourCards from '@/components/interview/TourCards';
 import DemoSections from '@/components/interview/DemoSections';
 import OnboardingBanner from '@/components/interview/OnboardingBanner';
 
@@ -23,10 +23,10 @@ const MockInterview = () => {
               <h1 className="text-2xl font-bold">Get started with your job interview practice</h1>
             </div>
             
-            <h2 className="text-xl font-semibold mb-6">Start with the fundamentals</h2>
+            <h2 className="text-xl font-semibold mb-6">Discover the power of AI-driven interview preparation</h2>
             
-            {/* Steps Cards */}
-            <StepCards />
+            {/* Tour Cards */}
+            <TourCards />
             
             {/* Demo Sections replaced with Mocktagon guide */}
             <DemoSections />
