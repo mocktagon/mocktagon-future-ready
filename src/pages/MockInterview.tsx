@@ -1,12 +1,24 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Layout } from '@/components/Layout';
 import Sidebar from '@/components/interview/Sidebar';
 import TourCards from '@/components/interview/TourCards';
 import DemoSections from '@/components/interview/DemoSections';
 import OnboardingBanner from '@/components/interview/OnboardingBanner';
+import TourOverlay from '@/components/interview/TourOverlay';
 
 const MockInterview = () => {
+  const [showTour, setShowTour] = useState(false);
+
+  useEffect(() => {
+    // Show tour overlay when component mounts
+    const timer = setTimeout(() => {
+      setShowTour(true);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Layout>
       <div className="pt-24 pb-16 px-4 sm:px-6 md:px-8 max-w-7xl mx-auto">
@@ -36,6 +48,12 @@ const MockInterview = () => {
           </div>
         </div>
       </div>
+
+      {/* Tour Overlay */}
+      <TourOverlay 
+        isOpen={showTour} 
+        onClose={() => setShowTour(false)} 
+      />
     </Layout>
   );
 };
