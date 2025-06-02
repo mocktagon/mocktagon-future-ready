@@ -67,10 +67,27 @@ const TourOverlay: React.FC<TourOverlayProps> = ({ isOpen, onClose }) => {
           </button>
 
           <div className="p-8 text-center">
-            {/* Icon */}
-            <div className={`mx-auto w-16 h-16 ${currentTourStep.color} rounded-2xl flex items-center justify-center text-white mb-6`}>
-              {currentTourStep.icon}
-            </div>
+            {/* Icon or Video */}
+            {currentStep === tourSteps.length - 1 ? (
+              <div className="mb-6">
+                <div className="relative w-full max-w-sm mx-auto aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="Mocktagon Demo"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="rounded-lg"
+                  />
+                </div>
+              </div>
+            ) : (
+              <div className={`mx-auto w-16 h-16 ${currentTourStep.color} rounded-2xl flex items-center justify-center text-white mb-6`}>
+                {currentTourStep.icon}
+              </div>
+            )}
 
             {/* Title */}
             <h2 className="text-2xl font-bold mb-2">
@@ -106,15 +123,15 @@ const TourOverlay: React.FC<TourOverlayProps> = ({ isOpen, onClose }) => {
                 <Button 
                   variant="outline" 
                   className="w-full justify-center gap-2"
-                  onClick={() => console.log('Quick demo clicked')}
+                  onClick={() => console.log('Quick interview clicked')}
                 >
-                  Quick Sneak Peek (2 min)
+                  Take a quick interview (no signup)
                 </Button>
                 <Button 
                   className="w-full justify-center gap-2 bg-purple-600 hover:bg-purple-700"
-                  onClick={() => console.log('Full experience clicked')}
+                  onClick={() => console.log('Personalized interview clicked')}
                 >
-                  Full Personalized Experience
+                  Personalized interview
                 </Button>
               </div>
             )}
